@@ -3,3 +3,7 @@
     action :install
   end
 end
+
+service node['mb_apache_haproxy']['httpd'] do
+  action [:enable, :start]
+end
